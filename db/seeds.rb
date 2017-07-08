@@ -58,7 +58,7 @@ deadpool_list.each do |deadpool|
     #add slots
     t[:characters].each do |character|
       character_id = Character.find_by(name: character).id
-      player.slots.create(character_id: character_id)
+      player.slots.create(character_id: character_id, is_alive: true)
     end
 
   end

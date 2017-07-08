@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><%= @deadpool.name %></title>
+    <title>Game of Thrones Deadpool</title>
     <!-- JQuery -->
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -38,6 +38,19 @@
             </div>
           </div>
           <br />
+
+          <!-- Players remaing -->
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              <% characters_alive = 0 %>
+              <% player.slots.each do |slot| %>
+                <% characters_alive += 1 if slot.is_alive %>
+              <% end %>
+              <p><%= characters_alive %> characters alive</p>
+            </div>
+          </div>
+          <br />
+
 
           <!-- Player characters -->
           <div class="row">

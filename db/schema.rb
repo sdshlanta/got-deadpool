@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170707183153) do
   create_table "slots", force: :cascade do |t|
     t.integer "player_id"
     t.integer "character_id"
+    t.boolean "is_alive"
   end
 
 end
