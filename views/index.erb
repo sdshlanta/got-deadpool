@@ -32,6 +32,14 @@
         u['__bttnio']=b;u[b]=u[b]||function(){(u[b].q=u[b].q||[]).push(arguments)};t=s.createElement(e);n=s.getElementsByTagName(e)[0];t.async=1;t.src='https://web.btncdn.com/v1/button.js';n.parentNode.insertBefore(t,n)
       })(window, document, 'script', 'bttnio');
     </script>
+    <script>
+      window.onload = function() {
+        window.setTimeout(function() {
+          var cells = document.getElementsByClassName('bttnio-cell bttnio-ellipsis');
+          cells[0].children[1].innerHTML = "Buy the books on Jet.com!";
+        }, 500);
+      }
+    </script>
 	</head>
 
 	<body>
