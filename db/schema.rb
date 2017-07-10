@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 20170707183153) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
-    t.string "img_url"
+    t.string "url"
+    t.boolean "is_alive"
   end
 
   create_table "deadpools", force: :cascade do |t|
@@ -32,7 +33,6 @@ ActiveRecord::Schema.define(version: 20170707183153) do
   create_table "slots", force: :cascade do |t|
     t.integer "player_id"
     t.integer "character_id"
-    t.boolean "is_alive"
   end
 
 end
