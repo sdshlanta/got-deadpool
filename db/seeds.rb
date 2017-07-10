@@ -1,5 +1,3 @@
-require 'byebug'
-
 ##Deadpool
 deadpool_list = [
   "Jon's negativity"
