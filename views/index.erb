@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Game of Thrones Deadpool</title>
-    <!-- JQuery -->
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="css/app.css">
-
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+		<title>Game of Thrones Deadpool</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,400,700">
     <!-- Include ButtonJS -->
     <script>
       window.ButtonWebConfig = {
@@ -40,58 +32,53 @@
         u['__bttnio']=b;u[b]=u[b]||function(){(u[b].q=u[b].q||[]).push(arguments)};t=s.createElement(e);n=s.getElementsByTagName(e)[0];t.async=1;t.src='https://web.btncdn.com/v1/button.js';n.parentNode.insertBefore(t,n)
       })(window, document, 'script', 'bttnio');
     </script>
-  </head>
-  <body>
-    <div data-bttnio-id="btn-1e716e657cf55302"></div>
-    <div class="row">
-      <div class="col-xs-8 col-xs-offset-2 text-center">
-        <h1><u>Game of Thrones Deadpool</u></h1>
-      </div>
-    </div>
-    <!--  -->
-    <div class="row">
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="col-lg-6 offset-lg-3 header">
+				<img class="object-center" alt="Game of Thrones logo" src="img/img_got-logo@2x.png" style="max-height: 100px;" />
+				<p class="lead">Follow along as five friends bet the all the gold in Bravos on the seventh season of HBO's hit show, Game of Thrones. Each player drafted 5 characters they believe will meet their end in the next 8 weeks. When you play the game of thrones, you win or you die.</p>
+        <div data-bttnio-id="btn-1e716e657cf55302"></div>
+			</div>
       <% @deadpool.players.each do |player| %>
-        <div class="col-xs-2">
 
-          <!-- Player name -->
-          <div class="row">
-            <div class="col-xs-12 text-center" id="player-name">
-              <%= player.name %>
-            </div>
-          </div>
-          <br />
-
-          <!-- Players remaing -->
-          <div class="row">
-            <div class="col-xs-12 text-center">
-              <% characters_alive = 0 %>
-              <% player.slots.each do |slot| %>
-                <% characters_alive += 1 if Character.find_by(id: slot.character_id).is_alive %>
-              <% end %>
-              <p><%= characters_alive %> characters alive</p>
-            </div>
-          </div>
-          <br />
-
-
-          <!-- Player characters -->
-          <div class="row">
-            <div class="col-xs-12">
-              <table>
-                <% player.slots.each do |slot| %>
-                  <div col="row">
-                    <div class="col-xs-6"><%= slot.character.name %></div>
-                    <div class="col-xs-6"><img src='/img/characters/<%= slot.character.name %>.jpg' height="128"></div>
-                    <br />
-                  </tr>
-                <% end %>
-              </table>
-            </div>
-          </div>
-
+      <!-- New Player -->
+      <div class="row player">
+        <div class="col-lg-2">
+          <h3>House</h3>
+          <h2><%= player.name %></h2>
+          <!-- Figure out remaining characters -->
+          <% characters_alive = 0 %>
+          <% player.slots.each do |slot| %>
+            <% characters_alive += 1 if Character.find_by(id: slot.character_id).is_alive %>
+          <% end %>
+          <!-- Display remaining characters -->
+          <p><%= characters_alive %> characters left</p>
         </div>
+
+        <!-- Display player's characters -->
+        <% player.slots.each do |slot| %>
+        <div class="col-lg-2">
+          <img class="object-center" alt='<%= slot.character.name %>' src='img/characters/<%= slot.character.name %>@2x.png' style="max-height: 180px;" />
+          <p><%= slot.character.name %></p>
+        </div>
+        <% end %>
+      </div>
+
       <% end %>
-    </div>
-    <!--  -->
-  </body>
+			<!-- Social -->
+			<div class="row">
+				<ul class="social object-center">
+					<li><a href="http://www.facebook.com/GameOfThrones/">Facebook</a></li>
+					<li><a href="http://twitter.com/GameOfThrones">Twitter</a></li>
+					<li><a href="http://www.instagram.com/gameofthrones/">Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	</body>
 </html>
