@@ -28,7 +28,7 @@ register Sinatra::Flash
 
 
   get '/create' do
-    @characters = Character.all
+    @characters = Character.all.order('name ASC')
     erb :create
   end
 

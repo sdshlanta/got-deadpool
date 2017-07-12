@@ -38,7 +38,30 @@ character_list = [
   ["Petyr Baelish (Littlefinger)", "https://gameofthrones.wikia.com/wiki/Petyr_Baelish"],
   ["Melisandre", "https://gameofthrones.wikia.com/wiki/Melisandre"],
   ["Theon Greyjoy", "https://gameofthrones.wikia.com/wiki/Theon_Greyjoy"],
-  ["Night King", "https://gameofthrones.wikia.com/wiki/Night_King"]
+  ["Night King", "https://gameofthrones.wikia.com/wiki/Night_King"],
+  ["Daenerys Targaryen", "https://gameofthrones.wikia.com/wiki/Daenerys_Targaryen"],
+  ["Jon Snow", "https://gameofthrones.wikia.com/wiki/Jon_Snow"],
+  ["Arya Stark", "https://gameofthrones.wikia.com/wiki/Arya_Stark"],
+  ["Tyrion Lannister", "https://gameofthrones.wikia.com/wiki/Tyrion_Lannister"],
+  ["Sandor Clegane", "https://gameofthrones.wikia.com/wiki/Sandor_Clegane"],
+  ["Gendry", "https://gameofthrones.wikia.com/wiki/Gendry"],
+  ["Ghost", "http://gameofthrones.wikia.com/wiki/Ghost"],
+  ["Sansa Stark", "https://gameofthrones.wikia.com/wiki/Sansa_Stark"],
+  ["Nymeria", "https://gameofthrones.wikia.com/wiki/Nymeria_(direwolf)"],
+  ["Drogon", "https://gameofthrones.wikia.com/wiki/Drogon"],
+  ["Viserion", "https://gameofthrones.wikia.com/wiki/Viserion"],
+  ["Olenna Tyrell", "https://gameofthrones.wikia.com/wiki/Olenna_Tyrell"],
+  ["Samwell Tarly", "http://gameofthrones.wikia.com/wiki/Samwell_Tarly"],
+  ["Gilly", "https://gameofthrones.wikia.com/wiki/Gilly"],
+  ["Bran Stark", "https://gameofthrones.wikia.com/wiki/Bran_Stark"],
+  ["Meera Reed", "https://gameofthrones.wikia.com/wiki/Meera_Reed"],
+  ["Obara Sand", "https://gameofthrones.wikia.com/wiki/Obara_Sand"],
+  ["Nymeria Sand", "https://gameofthrones.wikia.com/wiki/Nymeria_Sand"],
+  ["Tyene Sand", "https://gameofthrones.wikia.com/wiki/Tyene_Sand"],
+  ["Yohn Royce", "https://gameofthrones.wikia.com/wiki/Yohn_Royce"],
+  ["Daario Naharis", "https://gameofthrones.wikia.com/wiki/Daario_Naharis"],
+  ["Thoros", "https://gameofthrones.wikia.com/wiki/Thoros"],
+  ["Davos Seaworth", "https://gameofthrones.wikia.com/wiki/Davos_Seaworth"]
 ]
 
 ##Seed

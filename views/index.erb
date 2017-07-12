@@ -69,7 +69,7 @@
         <!-- Display player's characters -->
         <% player.slots.each do |slot| %>
         <div class='col-lg-2 <%= "dead" if !slot.character.is_alive %>'>
-          <img class="object-center" alt='<%= slot.character.name %>' src='img/characters/<%= slot.character.name %>@2x.png' style="max-height: 180px;" />
+          <img class="object-center" alt='<%= slot.character.name %>' src='img/characters/<%= slot.character.name %>@2x.png' style="max-height: 180px;border-radius: 8px;" />
           <p><%= slot.character.name %></p>
         </div>
         <% end %>
