@@ -46,6 +46,12 @@ register Sinatra::Flash
     end
   end
 
+  get '/all' do
+    @deadpools = Deadpool.all
+
+    erb :all
+  end
+
   get '/error' do
     erb :error
   end
