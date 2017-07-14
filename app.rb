@@ -46,8 +46,14 @@ register Sinatra::Flash
     end
   end
 
+  get '/error' do
+    erb :error
+  end
+
   get '/:deadpool_id' do
     @deadpool = Deadpool.find_by(id: params[:deadpool_id])
+    redirect '/error' if @deadpool.nil?
+
     @num_players = NumbersInWords.in_words(@deadpool.players.count)
 
     erb :index
