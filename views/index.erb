@@ -16,6 +16,7 @@
     <script>
       window.ButtonWebConfig = {
         applicationId: 'app-6d23818bee6b8ba1',
+        enhanceLinks: true,
         defaults: {
           'btn-1e716e657cf55302': {
             context: {
@@ -24,6 +25,11 @@
                   jet: '092abb50fbc54571a0c36085ba6bb767'
                 }
               }
+            }
+          },
+          'btn-5d97e9836d9faddf': {
+            context: {
+              url: "https://itunes.apple.com/gb/tv-season/game-of-thrones-seasons-1-6/id1104330858"
             }
           }
         }
@@ -49,6 +55,8 @@
 				<p class="lead">Follow along as <%= @num_players %> friends bet all the gold in Bravos on the seventh season of HBO's hit show, Game of Thrones. Each player drafted 5 characters they believe will meet their end in the next 8 weeks. Whoever has the least characters standing by the end, wins. When you play the game of thrones, you win or you die.</p>
         <p class="lead"><a href="/create">Create your own Game of Thrones Deadpool!</a></p>
         <div data-bttnio-id="btn-1e716e657cf55302"></div>
+        <!-- <div data-bttnio-id="btn-5d97e9836d9faddf"></div> -->
+        <div><button class="btn"><a href="https://track.bttn.io/itunes/?btn_fallback_exp=web&btn_ref=org-2b18573166a893d4">Watch on the show on iTunes!</a></button></div>
 			</div>
       <% @deadpool.players.each do |player| %>
 
@@ -76,7 +84,8 @@
       </div>
 
       <% end %>
-			<!-- Social -->
+
+			<!-- Social for GoT -->
 			<div class="row">
 				<ul class="social object-center">
 					<li><a href="http://www.facebook.com/GameOfThrones/">Facebook</a></li>
