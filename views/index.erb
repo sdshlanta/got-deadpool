@@ -26,11 +26,6 @@
                 }
               }
             }
-          },
-          'btn-5d97e9836d9faddf': {
-            context: {
-              url: "https://itunes.apple.com/gb/tv-season/game-of-thrones-seasons-1-6/id1104330858"
-            }
           }
         }
       };
@@ -55,8 +50,10 @@
 				<p class="lead">Follow along as <%= @num_players %> friends bet all the gold in Bravos on the seventh season of HBO's hit show, Game of Thrones. Each player drafted 5 characters they believe will meet their end in the next 8 weeks. Whoever has the least characters standing by the end, wins. When you play the game of thrones, you win or you die.</p>
         <p class="lead"><a href="/create">Create your own Game of Thrones Deadpool!</a></p>
         <div data-bttnio-id="btn-1e716e657cf55302"></div>
-        <!-- <div data-bttnio-id="btn-5d97e9836d9faddf"></div> -->
-        <div><button class="btn"><a href="https://track.bttn.io/itunes/?btn_fallback_exp=web&btn_ref=org-2b18573166a893d4">Watch on the show on iTunes!</a></button></div>
+        <a href="https://itunes.apple.com/gb/tv-season/game-of-thrones-seasons-1-6/id1104330858">
+          <p class="lead">Watch seasons 1-6 show on iTunes!</p>
+          <img class="object-center" alt='Season 1-6' src='img/got-seasons-1-6.png' style="max-height: 180px;border-radius: 8px;" />
+        </a>
 			</div>
       <% @deadpool.players.each do |player| %>
 
