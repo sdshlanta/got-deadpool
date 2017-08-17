@@ -52,6 +52,12 @@ register Sinatra::Flash
     erb :all
   end
 
+  get '/characters' do
+    @characters = Character.all
+
+    erb :characters
+  end
+
   get '/error' do
     erb :error
   end
