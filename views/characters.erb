@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+		<title>Game of Thrones Deadpool</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,400,700">
+    <!-- Include ButtonJS -->
+    <script>
+      window.ButtonWebConfig = {
+        applicationId: 'app-6d23818bee6b8ba1',
+        defaults: {
+          'btn-1e716e657cf55302': {
+            context: {
+              item: {
+                identifiers: {
+                  jet: '092abb50fbc54571a0c36085ba6bb767'
+                }
+              }
+            }
+          }
+        }
+      };
+      (function(u,s,e,b,t,n){
+        u['__bttnio']=b;u[b]=u[b]||function(){(u[b].q=u[b].q||[]).push(arguments)};t=s.createElement(e);n=s.getElementsByTagName(e)[0];t.async=1;t.src='https://web.btncdn.com/v1/button.js';n.parentNode.insertBefore(t,n)
+      })(window, document, 'script', 'bttnio');
+    </script>
+    <script>
+      window.onload = function() {
+        window.setTimeout(function() {
+          var cells = document.getElementsByClassName('bttnio-cell bttnio-ellipsis');
+          cells[0].children[1].innerHTML = "Buy the books on Jet.com!";
+        }, 500);
+      }
+    </script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="col-lg-6 offset-lg-3 header">
+				<img class="object-center" alt="Game of Thrones logo" src="img/img_got-logo@2x.png" style="max-height: 100px;" />
+				<p class="lead">Follow along as friends bet all the gold in Braavos on the seventh season of HBO's hit show, Game of Thrones. Each player drafted 5 characters they believe will meet their end in the next 8 weeks. Whoever has the least characters standing by the end, wins. When you play the game of thrones, you win or you die.</p>
+        <p class="lead"><a href="/create">Create your own Game of Thrones Deadpool!</a></p>
+        <div data-bttnio-id="btn-1e716e657cf55302"></div>
+			</div>
+
+      <!-- Display player's characters -->
+      <% @characters.each do |character| %>
+      <div class="row player=">
+        <div class='col-lg-12 <%= "dead" if !character.is_alive %>'>
+          <img class="object-center" alt='<%= character.name %>' src='img/characters/<%= character.name %>@2x.png' style="max-height: 180px;border-radius: 8px;" />
+          <p><%= character.name %></p>
+        </div>
+      </div>
+      <% end %>
+
+			<!-- Social -->
+			<div class="row">
+				<ul class="social object-center">
+					<li><a href="http://www.facebook.com/GameOfThrones/">Facebook</a></li>
+					<li><a href="http://twitter.com/GameOfThrones">Twitter</a></li>
+					<li><a href="http://www.instagram.com/gameofthrones/">Instagram</a></li>
+				</ul>
+			</div>
+      <!-- Social -->
+      <div class="row">
+        <ul class="social object-center">
+          <li>Created by <a href="https://twitter.com/tylernappy">@tylernappy</a></li>
+          <li>Design by <a href="https://twitter.com/patricknlewis">@patricknlewis</a></li>
+        </ul>
+      </div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-102502907-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+	</body>
+</html>
