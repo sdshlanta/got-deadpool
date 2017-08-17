@@ -2,6 +2,8 @@ class Slot < ActiveRecord::Base
   belongs_to :player
   belongs_to :character
 
+  has_one :deadpool, through: :players
+
   # attr_accessor :player_id
   # attr_accessor :character_id
 
