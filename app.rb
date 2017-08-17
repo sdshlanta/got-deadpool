@@ -56,6 +56,12 @@ register Sinatra::Flash
     erb :error
   end
 
+  get '/api/:deadpool_id' do
+    content_type :json
+
+    Deadpool.api_payload(params[:deadpool_id])
+  end
+
   get '/:deadpool_id' do
     @deadpool = Deadpool.find_by(id: params[:deadpool_id])
     redirect '/error' if @deadpool.nil?

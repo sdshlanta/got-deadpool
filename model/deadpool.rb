@@ -1,5 +1,6 @@
 class Deadpool < ActiveRecord::Base
   has_many :players
+  has_many :slots, through: :players
 
   def self.create_deadpool(params)
     deadpool = Deadpool.create(name: params[:deadpool_name])
@@ -17,6 +18,21 @@ class Deadpool < ActiveRecord::Base
       end
     end
     return deadpool
+  end
+
+  def self.api_payload(deadpool_id)
+    deadpool = Deadpool.find_by(id: deadpool_id)
+    players = deadpool.players
+
+    payload = {data: []}
+    players.each do |player|
+      characters_array = []
+      player.slots.each do |slot|
+        characters_array << slot.character
+      end
+      payload[:data] << {player: player, characters: characters_array}
+    end
+    payload.to_json
   end
 
 end
