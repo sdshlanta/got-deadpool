@@ -84,21 +84,3 @@ character_list = [
 character_list.each do |name, url|
   Character.create(name: name, url: url, is_alive: true)
 end
-
-deadpool_list.each do |deadpool|
-  deadpool = Deadpool.create(name: deadpool)
-
-  player_list.each do |t|
-
-    player = deadpool.players.new #new player
-    player.name = t[:name] #set name
-    player.save #save player
-
-    #add slots
-    t[:characters].each do |character|
-      character_id = Character.find_by(name: character).id
-      player.slots.create(character_id: character_id)
-    end
-
-  end
-end
