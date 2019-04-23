@@ -65,7 +65,7 @@
 			</div>
 
       <!-- Display player's characters -->
-      <div class='grid-container'
+      <div class='grid-container' style="grid-auto-flow: row;">
       <% @characters.each do |character| %>
       <div class="row player=">
         <div class='<%= "dead" if !character.is_alive %>'>
