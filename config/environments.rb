@@ -8,7 +8,7 @@ configure :production, :development do
       :host     => db.host,
       :username => db.user,
       :password => db.password,
-      :database => 'd87b23tpkt8s8s'
+      :database => 'd87b23tpkt8s8s',
       :encoding => 'utf8'
   )
 end
