@@ -40,6 +40,19 @@
         }, 500);
       }
     </script>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+      }
+
+      .grid-container > div {
+        padding: 20px 0;
+      }
+    </style>
 	</head>
 
 	<body>
@@ -52,10 +65,11 @@
 			</div>
 
       <!-- Display player's characters -->
+      <div class='grid-container'
       <% @characters.each do |character| %>
       <div class="row player=">
-        <div class='col-lg-12 <%= "dead" if !character.is_alive %>'>
-          <img class="object-center" alt='<%= character.name %>' src='img/characters/<%= character.name %>@.png' style="max-height: 180px;border-radius: 8px;" />
+        <div class='<%= "dead" if !character.is_alive %>'>
+          <img class="object-center" alt='<%= character.name %>' src='img/characters/<%= character.name %>.png' style="max-height: 180px;border-radius: 8px;" />
           <p><%= character.name %></p>
         </div>
       </div>
