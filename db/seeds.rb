@@ -1,3 +1,19 @@
+require 'sinatra'
+require 'dotenv'
+require 'sinatra/activerecord'
+require '../config/environments'
+require '../model/character'
+require '../model/deadpool'
+require '../model/player'
+require '../model/slot'
+require 'button'
+require 'money'
+require 'json'
+require 'byebug'
+require 'sinatra/flash'
+require 'numbers_in_words'
+Dotenv.load
+
 ##Deadpool
 deadpool_list = [
   "Jon's negativity"
