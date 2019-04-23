@@ -9,7 +9,7 @@ class Slot < ActiveRecord::Base
 
   def self.check_unique_slots(params)
     all_slots = []
-    for j in 1..50
+    for j in 1..20
       return "Players require a name." if !params["player_#{j}_characters"].nil? && params["player_#{j}_name"].empty?
       return "Choose 5 characters for each player." if !params["player_#{j}_characters"].nil? && params["player_#{j}_characters"].length != 5
       all_slots += params["player_#{j}_characters"] if !params["player_#{j}_characters"].nil?
