@@ -4,7 +4,7 @@ class Deadpool < ActiveRecord::Base
 
   def self.create_deadpool(params)
     deadpool = Deadpool.create(name: params[:deadpool_name])
-    for j in 1..5
+    for j in 1..50
       if !params["player_#{j}_characters"].nil?
         player = deadpool.players.new #new player
         player.name = params["player_#{j}_name"] #set name
