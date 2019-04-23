@@ -10,7 +10,7 @@ production:
   encoding: unicode
   pool: 5
   database: d87b23tpkt8s8s
-  username: fombgdhmgutkci
-  password: 3d08f4af718d23ab717bdd6426eb6b44221a604133e6887ef62887a495405ad8
-  host: ec2-184-73-210-189.compute-1.amazonaws.com
+  username:
+  password:
+  host: 
   port: 5432
