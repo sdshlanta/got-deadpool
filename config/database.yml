@@ -1,16 +1,9 @@
-development:
-  adapter: postgresql
-  database: got-deadpool
-  username: got-deadpool
-  password: got-deadpool
-  host: localhost
-
 production:
   adapter: postgresql
   encoding: unicode
   pool: 5
   database: d87b23tpkt8s8s
-  username:
-  password:
-  host: 
+  username: fombgdhmgutkci
+  password: 3d08f4af718d23ab717bdd6426eb6b44221a604133e6887ef62887a495405ad8
+  host: ec2-184-73-210-189.compute-1.amazonaws.com
   port: 5432
