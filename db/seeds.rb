@@ -1,4 +1,3 @@
-
 ##Deadpool
 deadpool_list = [
   "Jon's negativity"
